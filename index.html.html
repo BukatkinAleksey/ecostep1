@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Экостепь — Экодала</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;900&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--orn:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2032%27%20width%3D%2760%27%20height%3D%2732%27%3E%3Crect%20width%3D%2760%27%20height%3D%2732%27%20fill%3D%27%230b4a6a%27/%3E%3Cpath%20d%3D%27M0%202H60M0%2030H60%27%20stroke%3D%27%23e3a72f%27%20stroke-width%3D%271.2%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e3a72f%27%20stroke-width%3D%272.2%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M30%2026C20%2026%2014%2020%2017%2014C20%209%2028%2011%2026%2017C25%2020%2021%2019%2021%2017%27/%3E%3Cpath%20d%3D%27M30%2026C40%2026%2046%2020%2043%2014C40%209%2032%2011%2034%2017C35%2020%2039%2019%2039%2017%27/%3E%3C/g%3E%3Cpath%20d%3D%27M30%204L34%208L30%2012L26%208Z%27%20fill%3D%27%23e3a72f%27/%3E%3C/svg%3E");--pat:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27120%27%20height%3D%27120%27%20viewBox%3D%270%200%20120%20120%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23b8913a%27%20stroke-opacity%3D%27.2%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%3E%3Cg%20transform%3D%27translate%280%200%29%27%3E%3Cpath%20d%3D%27M30%2026C20%2026%2014%2020%2017%2014C20%209%2028%2011%2026%2017C25%2020%2021%2019%2021%2017%27/%3E%3Cpath%20d%3D%27M30%2026C40%2026%2046%2020%2043%2014C40%209%2032%2011%2034%2017C35%2020%2039%2019%2039%2017%27/%3E%3C/g%3E%3Cg%20transform%3D%27translate%2860%2060%29%27%3E%3Cpath%20d%3D%27M30%2026C20%2026%2014%2020%2017%2014C20%209%2028%2011%2026%2017C25%2020%2021%2019%2021%2017%27/%3E%3Cpath%20d%3D%27M30%2026C40%2026%2046%2020%2043%2014C40%209%2032%2011%2034%2017C35%2020%2039%2019%2039%2017%27/%3E%3C/g%3E%3C/g%3E%3Cpath%20d%3D%27M30%204L34%208L30%2012L26%208Z%27%20fill%3D%27%23b8913a%27%20fill-opacity%3D%27.2%27/%3E%3Cpath%20d%3D%27M90%2064L94%2068L90%2072L86%2068Z%27%20fill%3D%27%23b8913a%27%20fill-opacity%3D%27.2%27/%3E%3C/svg%3E");--shy:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%27-100%20-100%20200%20200%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23f2c14e%27%20stroke-width%3D%276%27%3E%3Ccircle%20r%3D%2788%27/%3E%3Ccircle%20r%3D%2770%27%20stroke-width%3D%273%27/%3E%3Ccircle%20r%3D%2712%27/%3E%3Cpath%20d%3D%27M0%20-88V88M-76%20-44L76%2044M-76%2044L76%20-44%27%20stroke-width%3D%274%27/%3E%3C/g%3E%3Cg%20fill%3D%27%23f2c14e%27%3E%3Ccircle%20cy%3D%27-88%27%20r%3D%277%27/%3E%3Ccircle%20cy%3D%2788%27%20r%3D%277%27/%3E%3Ccircle%20cx%3D%2776%27%20cy%3D%2744%27%20r%3D%277%27/%3E%3Ccircle%20cx%3D%27-76%27%20cy%3D%2744%27%20r%3D%277%27/%3E%3Ccircle%20cx%3D%2776%27%20cy%3D%27-44%27%20r%3D%277%27/%3E%3Ccircle%20cx%3D%27-76%27%20cy%3D%27-44%27%20r%3D%277%27/%3E%3C/g%3E%3C/svg%3E");--bg:#f5ecd7;--card:#fffaf0;--ink:#12304a;--mute:#6d624d;--sky:#0f8a9d;--skyl:#d7edee;--grass:#1f7a5a;--grassl:#e1efdf;--gold:#e3a72f;--goldl:#fbefcb;--red:#a62639;--line:#dfc98f;--navy:#0b3a5c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d2230;--card:#12303f;--ink:#f1e7cc;--mute:#a7b7ba;--skyl:#14414f;--grassl:#163b30;--goldl:#3b3213;--line:#4a5f55}}
+:root[data-theme="dark"]{--bg:#0d2230;--card:#12303f;--ink:#f1e7cc;--mute:#a7b7ba;--skyl:#14414f;--grassl:#163b30;--goldl:#3b3213;--line:#4a5f55}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--bg);background-image:var(--pat);color:var(--ink);font:500 17px/1.55 Nunito,system-ui,sans-serif}
+button{font:inherit;cursor:pointer;color:inherit}
+h1,h2,h3{margin:0;line-height:1.2;font-family:Lora,Georgia,serif;font-weight:700}
+.wrap{max-width:980px;margin:0 auto;padding:16px}
+.band{height:28px;background:var(--orn) repeat-x center/auto 28px;border-radius:4px;border:1px solid var(--gold)}
+.btn{border:0;border-bottom:5px solid rgba(0,0,0,.28);border-radius:10px;padding:12px 22px;font-weight:900;background:var(--gold);color:#3a2a00}
+.btn:active{transform:translateY(3px);border-bottom-width:2px}
+.btn.sky{background:var(--sky);color:#fff}.btn.grass{background:var(--grass);color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.card{position:relative;overflow:hidden;background:var(--card);border:2px solid var(--gold);border-radius:14px;padding:34px 22px 22px;box-shadow:0 4px 0 rgba(11,58,92,.18)}
+.card::before{content:'';position:absolute;left:0;right:0;top:0;height:14px;background:var(--orn) repeat-x center/auto 14px}
+.login{position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px;background:radial-gradient(circle at 14% 16%,#f4c542 0 6%,transparent 6.3%),linear-gradient(#8fd6dc 56%,#d8c986 56%)}
+.login::after{content:'';position:absolute;left:0;right:0;top:56%;height:34px;transform:translateY(-50%);background:var(--orn) repeat-x center/auto 34px;border-block:2px solid var(--gold)}
+.login .card{position:relative;z-index:2;max-width:460px;width:100%;text-align:center;padding:40px 26px 30px;border:5px double var(--gold)}
+.login h1{font-size:clamp(2.2rem,9vw,3.2rem);color:var(--navy);margin:6px 0}
+.login input{width:100%;padding:14px;border:3px solid var(--gold);border-radius:10px;font:900 1.2rem Nunito,sans-serif;text-align:center;background:var(--bg);color:var(--ink);margin:16px 0}
+.lang{display:inline-flex;border:2px solid var(--gold);border-radius:10px;overflow:hidden}
+.lang button{border:0;background:none;padding:6px 14px;font-weight:900}
+.lang button.on{background:var(--gold);color:#3a2a00}
+.top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:linear-gradient(120deg,#0b3a5c,#0f6a82);color:#fff}
+.top .lang button{color:#fff}.top .lang button.on{color:#3a2a00}
+.who{display:flex;align-items:center;gap:10px;font-weight:900}
+.bar{flex:1;min-width:200px}
+.bar .lbl{display:flex;justify-content:space-between;font-weight:900;font-size:.9rem;margin-bottom:4px}
+.track{height:18px;border-radius:99px;background:#082a44;overflow:hidden;border:2px solid var(--gold)}
+.fill{height:100%;background:linear-gradient(90deg,#f2c14e,#e3a72f);transition:width .8s}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:16px 0}
+.tabs button{flex:0 0 auto;border:2px solid var(--gold);background:var(--card);border-radius:10px;padding:10px 18px;font-weight:900}
+.tabs button.on{background:var(--navy);color:var(--gold)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0b3a5c,#0f7a8f);color:#fff;border:3px solid var(--gold);border-radius:16px;padding:26px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.hero::after{content:'';position:absolute;right:-50px;top:-60px;width:280px;height:280px;background:var(--shy) center/contain no-repeat;opacity:.3;animation:spin 80s linear infinite;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h2{font-size:clamp(1.6rem,5vw,2.4rem);margin-bottom:8px;color:#f6d77a}
+.hero p{margin:0;max-width:460px;opacity:.95}
+.dip{width:100%;margin:16px 0;display:flex;gap:16px;align-items:center;text-align:left;padding:18px 22px;border-radius:14px;border:3px solid #8a5d0a;border-bottom-width:8px;background:linear-gradient(#f2c14e,#e3a72f);color:#3a2a00}
+.dip:disabled{background:var(--card);color:var(--mute);border:2px dashed var(--gold);cursor:not-allowed}
+.dip b{font-size:1.5rem;display:block;font-family:Lora,Georgia,serif}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.game{position:relative;overflow:hidden;border:0;border-bottom:8px solid rgba(0,0,0,.3);border-radius:14px;padding:38px 20px 24px;color:#fff;text-align:center;box-shadow:inset 0 0 0 3px rgba(243,193,78,.7)}
+.game::before{content:'';position:absolute;left:0;right:0;top:0;height:16px;background:var(--orn) repeat-x center/auto 16px}
+.game .ic{font-size:3.4rem}
+.game b{display:block;font-size:1.5rem;margin:6px 0;font-family:Lora,Georgia,serif}
+.game small{display:inline-block;background:rgba(0,0,0,.28);border-radius:6px;padding:3px 12px;font-weight:700}
+.tip p{margin:10px 0 0;max-width:70ch}
+.tip h3{display:flex;gap:10px;align-items:center}
+.ranks{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:14px}
+.rank{display:flex;gap:14px;align-items:center;border-radius:12px;padding:16px;border:3px double var(--line);background:var(--card)}
+.rank.ok{background:var(--goldl);border-color:var(--gold)}
+.rank:not(.ok){opacity:.6}
+.rank .ic{font-size:2.2rem}
+.gh{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:14px 0 18px}
+.pill{background:var(--card);border:2px solid var(--gold);border-radius:8px;padding:6px 16px;font-weight:900}
+.pill.gold{background:var(--gold);color:#3a2a00}
+.item{text-align:center;font-size:6rem;margin:10px 0;transition:.3s}
+.item.ok{transform:translateY(-40px) scale(1.2);opacity:0}
+.item.bad{filter:hue-rotate(300deg)}
+.item small{display:block;font:900 1.3rem Nunito,sans-serif}
+.bins{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.bin{border:0;border-bottom:6px solid rgba(0,0,0,.3);border-radius:12px;padding:14px 6px;background:var(--sky);color:#fff;font-weight:900;box-shadow:inset 0 0 0 2px rgba(243,193,78,.7)}
+.bin span{display:block;font-size:2rem}
+.opt{display:block;width:100%;text-align:left;margin:10px 0;padding:14px 18px;border-radius:10px;border:3px solid var(--line);background:var(--card);font-weight:800;font-size:1.1rem}
+.opt.ok{background:var(--grass);border-color:var(--grass);color:#fff}
+.opt.no{background:var(--red);border-color:var(--red);color:#fff}
+.fact{background:var(--skyl);border-left:6px solid var(--sky);border-radius:8px;padding:14px 18px;margin:14px 0;font-weight:700}
+.field{position:relative;height:60vh;min-height:320px;border-radius:14px;background:linear-gradient(#9bdde3 0 22%,#cdbd78 22%);overflow:hidden;border:4px solid var(--gold)}
+.trash{position:absolute;font-size:3rem;border:0;background:none;padding:0;transition:transform .15s}
+.trash:hover{transform:scale(1.2)}
+.center{text-align:center}.center h2{font-size:2.2rem;margin:10px 0}
+.tg{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.mem{display:grid;gap:10px;grid-template-columns:repeat(4,1fr);max-width:520px;margin:0 auto}
+.mc{aspect-ratio:1;border:0;border-bottom:5px solid rgba(0,0,0,.3);border-radius:10px;font-size:2rem;background:var(--sky);color:#fff;box-shadow:inset 0 0 0 2px rgba(243,193,78,.7)}
+.mc.o{background:var(--card);border:2px solid var(--gold)}.mc.m{background:var(--goldl);border:2px solid var(--grass)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tf{position:relative;height:clamp(440px,72vh,580px);margin-top:14px;border-radius:14px;background:var(--grassl);background-image:var(--pat);border:3px double var(--gold);overflow:hidden;touch-action:none}
+.cb{position:absolute;width:40%;height:25%;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:12px;color:#fff;font-weight:900;font-size:1.05rem;border-bottom:6px solid rgba(0,0,0,.3);box-shadow:inset 0 0 0 3px rgba(243,193,78,.75);transition:transform .15s}
+.cb.hot{outline:4px solid var(--gold);transform:scale(1.05)}
+.ti{position:absolute;transform:translate(-50%,-50%);width:78px;text-align:center;touch-action:none;cursor:grab;user-select:none;z-index:5}
+.ti span{display:block;font-size:2.6rem;line-height:1.1}.ti small{display:block;font-weight:800;font-size:.68rem;line-height:1.1;color:var(--ink)}
+.ti.drag{z-index:50;cursor:grabbing;transition:none}.ti.bad{animation:shk .4s}
+@keyframes shk{25%{margin-left:-12px}75%{margin-left:12px}}
+.diploma{background:#fffaf0;color:#0b3a5c;border:14px solid #0b3a5c;outline:5px double #d9a521;outline-offset:-26px;padding:78px 24px 70px;text-align:center;max-width:900px;margin:0 auto;position:relative}
+.diploma::before,.diploma::after{content:'';position:absolute;left:34px;right:34px;height:28px;background:var(--orn) repeat-x center/auto 28px;border:1px solid #d9a521}
+.diploma::before{top:34px}.diploma::after{bottom:34px}
+.diploma h1{font:700 clamp(2.6rem,10vw,5rem)/1 Lora,Georgia,serif;letter-spacing:.06em;text-transform:uppercase;margin:10px 0}
+.diploma .nm{font:700 clamp(2rem,7vw,3.4rem) Lora,Georgia,serif;color:#b8862a;border-bottom:4px dashed #9fd0e6;display:inline-block;padding:0 24px;margin:12px 0 18px}
+.diploma .rk{display:inline-block;background:#e3f3fb;border:4px double #d9a521;border-radius:10px;padding:12px 30px;font-size:1.8rem;font-weight:900;margin:14px 0}
+.diploma .ft{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-top:22px;text-align:left}
+.stamp{border:4px double var(--red);color:var(--red);border-radius:50%;width:110px;height:110px;display:flex;align-items:center;justify-content:center;font-weight:900;transform:rotate(-12deg);text-align:center;line-height:1.1}
+.sig{border-top:3px solid #0b3a5c;padding-top:6px;min-width:200px;text-align:center;font-style:italic}
+@media print{body *{visibility:hidden}.diploma,.diploma *{visibility:visible}.diploma{position:absolute;left:0;top:0;width:100%}.np{display:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const HORN=['M30 26C20 26 14 20 17 14C20 9 28 11 26 17C25 20 21 19 21 17','M30 26C40 26 46 20 43 14C40 9 32 11 34 17C35 20 39 19 39 17'],DIA='M30 4L34 8L30 12L26 8Z';
+const REQ=540,U2=160,U3=320;
+const YURT='<svg viewBox="0 0 120 100" width="64" height="54" aria-hidden="true"><path d="M60 10Q20 15 10 50h100Q100 15 60 10Z" fill="#f8fafc" stroke="#9fb4bd"/><rect x="15" y="50" width="90" height="42" fill="#f8fafc" stroke="#9fb4bd"/><path d="M12 42h96l2 8H10Z" fill="#be123c"/><rect x="15" y="62" width="90" height="8" fill="#0369a1"/><rect x="15" y="86" width="90" height="6" fill="#b45309"/><path d="M45 92V58Q60 46 75 58v34Z" fill="#78350f"/><ellipse cx="60" cy="12" rx="15" ry="4" fill="#d97706"/><path d="M52 30Q60 20 68 30v20H52Z" fill="#0ea5e9"/></svg>';
+const T={ru:{
+app:'Экостепь',sub:'Добро пожаловать в бескрайнюю и чистую степь!',ph:'Как тебя зовут, герой?',go:'Начать путешествие',
+games:'Игры',tips:'Советы',map:'Эко-карта',stats:'Статистика',diploma:'Диплом',
+hero:'Вместе мы сохраним степь чистой!',herop:'Изучай эко-советы, играй в мини-игры и получи диплом Экобатыра.',
+getd:'Получить диплом!',need:'Набери 540 баллов',avail:'Доступно!',
+g1:'Сортировка',g1d:'Доступно сразу (+30 баллов)',g2:'Эко-загадки',g2d:'От 150 баллов (+40)',g3:'Очисти степь',g3d:'От 300 баллов (+50)',
+t1:'Правильная сортировка мусора',t1p:'Разделяйте отходы: бумага, пластик, стекло и пищевые остатки — отдельно. С бутылок снимайте крышки, сжимайте их и споласкивайте. Бумагу и картон держите сухими. Батарейки, аккумуляторы и лампочки нельзя выбрасывать в общий бак — сдавайте их в специальные эко-боксы.',
+t2:'Как экономить ресурсы дома',t2p:'Закрывайте воду, пока чистите зубы или намыливаете посуду — это десятки литров в день. Замените лампочки на светодиодные, выключайте свет и приборы, которыми не пользуетесь, а в магазин ходите с многоразовой сумкой.',
+qa:'Вопрос эко-мудрецу',qph:'Спроси о природе, например: почему важно беречь воду?',ask:'Спросить',
+mapt:'Эко-карта степи',mapd:'Нажми на точку, чтобы узнать, что там можно сделать',
+st:'Путь к диплому',std:'Зарабатывай баллы в играх. Цель — 540!',r1:'Новичок',r2:'Следопыт',r3:'Защитник',r4:'Экобатыр',opened:'Открыто!',needp:'Нужно баллов: ',
+sortq:'Куда это выбросить?',item:'Предмет',paper:'Бумага',plastic:'Пластик',organic:'Органика',glass:'Стекло',hazard:'Батарейки',
+done:'Отлично!',sd:'Игра пройдена. Играй снова, чтобы набрать больше баллов.',menu:'В меню',again:'Играть ещё раз',next:'Дальше',riddle:'Загадка',
+quest:'Очисти степь от мусора!',qdone:'Степь чиста!',
+print:'Распечатать',awarded:'Награждается',dtext:'За заботу о родной природе и высшее звание в проекте',rl:'Звание',rank:'Экобатыр',fs:'Итоговый балл',sign:'Подпись',
+items:{bottle:'Пластиковая бутылка',news:'Газета',apple:'Огрызок яблока',box:'Картонная коробка',banana:'Кожура банана',cup:'Пластиковый стаканчик',jar:'Стеклянная банка',bat:'Батарейка'},
+pts:{g:'Стеклотара',b:'Приём батареек',p:'Пункт пластика',t:'Эко-парк',m:'Макулатура',c:'Эко-центр'},
+},
+kz:{
+app:'Экодала',sub:'Шексіз әрі таза далаға қош келдіңіз!',ph:'Есімің кім, батыр?',go:'Саяхатты бастау',
+games:'Ойындар',tips:'Кеңестер',map:'Эко-карта',stats:'Статистика',diploma:'Диплом',
+hero:'Бірге даланы таза сақтаймыз!',herop:'Эко-кеңестерді оқы, ойындар ойна және Экобатыр дипломын ал.',
+getd:'Диплом алу!',need:'540 ұпай жина',avail:'Қолжетімді!',
+g1:'Сұрыптау',g1d:'Бірден қолжетімді (+30 ұпай)',g2:'Эко-жұмбақтар',g2d:'150 ұпайдан бастап (+40)',g3:'Даланы тазарт',g3d:'300 ұпайдан бастап (+50)',
+t1:'Қоқысты қалай дұрыс сұрыптау керек',t1p:'Қалдықтарды бөлек жинаңыз: қағаз, пластик, шыны және тамақ қалдықтары. Бөтелкенің қақпағын шешіп, сығып, шайыңыз. Қағазды құрғақ ұстаңыз. Батареялар мен шамдарды жалпы қоқысқа тастамай, арнайы эко-бокстарға апарыңыз.',
+t2:'Ресурстарды үйде қалай үнемдеуге болады',t2p:'Тіс жуғанда, ыдыс сабындағанда суды жабыңыз — бұл күніне ондаған литр су. Шамдарды LED-ке ауыстырыңыз, қолданбайтын құрылғыларды өшіріңіз, дүкенге эко-сөмкемен барыңыз.',
+qa:'Эко-данышпанға сұрақ',qph:'Табиғат туралы сұра, мысалы: суды неге сақтау керек?',ask:'Сұрау',
+mapt:'Даланың эко-картасы',mapd:'Не істеуге болатынын білу үшін нүктені бас',
+st:'Дипломға апарар жол',std:'Ойындарда ұпай жина. Мақсат — 540!',r1:'Жаңадан бастаушы',r2:'Ізкесуші',r3:'Қорғаушы',r4:'Экобатыр',opened:'Ашық!',needp:'Керек ұпай: ',
+sortq:'Мынаны қайда тастау керек?',item:'Зат',paper:'Қағаз',plastic:'Пластик',organic:'Органика',glass:'Шыны',hazard:'Батарея',
+done:'Керемет!',sd:'Ойын аяқталды. Көбірек ұпай жинау үшін қайта ойна.',menu:'Мәзірге',again:'Қайта ойнау',next:'Келесі',riddle:'Жұмбақ',
+quest:'Даланы қоқыстан тазарт!',qdone:'Дала таза!',
+print:'Басып шығару',awarded:'Марапатталады',dtext:'Туған табиғатқа қамқорлығы және жобадағы ең жоғары атағы үшін',rl:'Атағы',rank:'Экобатыр',fs:'Қорытынды ұпай',sign:'Қолтаңба',
+items:{bottle:'Пластик бөтелке',news:'Газет',apple:'Алма қалдығы',box:'Картон қорап',banana:'Банан қабығы',cup:'Пластик стақан',jar:'Шыны банка',bat:'Батарейка'},
+pts:{g:'Шыны қабылдау',b:'Батарея қабылдау',p:'Пластик пункті',t:'Эко-саябақ',m:'Макулатура',c:'Эко-орталық'},
+}};
+
+Object.assign(T.ru,{rst:'Сбросить',rq:'Сбросить всё: баллы, прогресс и имя? Вы вернётесь на начальный экран.',yes:'Да, сбросить',no:'Отмена',thr:'Эко-бросок',thd:'Перетащи мусор из центра в нужную мусорку в углу',dl:'Скачать PDF',pdfErr:'Не удалось создать PDF. Попробуйте ещё раз.',lvl:'Уровень',lvs:'К уровням',got:'Получено баллов: ',nopts:'Баллы за это уже получены — можно просто играть для удовольствия',rd:'Раунд завершён!',sd:'Отличная работа!',tt:'Юным экогероям',ta:'Взрослым',right:'Верно!',wrong:'Не совсем.',tr:'✅ Правда',my:'❌ Миф',
+g1:'Сортировка',g1d:'3 уровня • до 108 баллов',g2:'Эко-загадки',g2d:'10 вопросов • до 120',g3:'Правда или миф',g3d:'10 фактов • до 100',g4:'Эко-память',g4d:'3 уровня • до 150',g5:'Очисти степь',g5d:'3 уровня • до 150'});
+Object.assign(T.kz,{rst:'Қайта бастау',rq:'Барлығы өшіріледі: ұпай, прогресс және есім. Бастапқы экранға ораласыз.',yes:'Иә, өшіру',no:'Бас тарту',thr:'Эко-лақтыру',thd:'Ортадағы қоқысты бұрыштағы дұрыс жәшікке сүйреп апар',dl:'PDF жүктеу',pdfErr:'PDF жасау мүмкін болмады. Қайталап көріңіз.',lvl:'Деңгей',lvs:'Деңгейлерге',got:'Алған ұпай: ',nopts:'Бұл ұпайлар бұрын алынған — рахаттанып ойна',rd:'Раунд аяқталды!',sd:'Керемет жұмыс!',tt:'Кішкентай эко-батырларға',ta:'Ересектерге',right:'Дұрыс!',wrong:'Дәл емес.',tr:'✅ Шындық',my:'❌ Аңыз',
+g1:'Сұрыптау',g1d:'3 деңгей • 108 ұпайға дейін',g2:'Эко-жұмбақтар',g2d:'10 сұрақ • 120-ға дейін',g3:'Шындық па, аңыз ба?',g3d:'10 факт • 100-ге дейін',g4:'Эко-жады',g4d:'3 деңгей • 150-ге дейін',g5:'Даланы тазарт',g5d:'3 деңгей • 150-ге дейін'});
+const D={ru:{
+r:[['Куда нужно нести старые батарейки?',['В реку','В обычный бак','В эко-бокс'],2,'В батарейках тяжёлые металлы.'],['Символ степи с необычным носом?',['Сайгак','Верблюд','Тушканчик'],0,'Сайгак занесён в Красную книгу.'],['Какая сумка лучше для магазина?',['Пластиковый пакет','Эко-сумка','Одноразовый пакет'],1,'Одна эко-сумка заменяет сотни пакетов.'],['Сколько раз можно перерабатывать стекло?',['1 раз','5 раз','Бесконечно'],2,'Стекло не теряет свойств.'],['Что делать с водой, пока чистишь зубы?',['Оставить течь','Закрыть кран','Включить сильнее'],1,'Так экономятся десятки литров в день.'],['Сколько разлагается пластиковая бутылка?',['Около 5 лет','Около 50 лет','Сотни лет'],2,'Поэтому пластик надо сдавать в переработку.'],['Какие лампы экономят энергию?',['Светодиодные (LED)','Лампы накаливания','Все одинаково'],0,'LED тратят намного меньше электричества.'],['Что даёт переработка макулатуры?',['Меньше рубят деревьев','Ничего','Больше мусора'],0,'Ещё тратится меньше воды и энергии.'],['Что делать с мусором на пикнике в степи?',['Закопать','Забрать с собой','Сжечь'],1,'Степь любит, когда после нас не остаётся следов.'],['Что лучше для природы?',['Починить вещь','Сразу купить новую','Выбросить'],0,'У вещей может быть вторая жизнь.']],
+m:[['Стекло можно перерабатывать много раз.',true,'Верно: стекло не теряет качества.'],['Банановая кожура в степи исчезнет за день.',false,'Нет: она лежит недели и месяцы.'],['Неисправный кран может терять десятки литров воды в сутки.',true,'Да, поэтому кран нужно чинить.'],['Сайгаки живут в степях Казахстана.',true,'Да, это символ нашей степи.'],['Пластик исчезает в земле за год.',false,'Нет: он разлагается сотни лет.'],['Деревья очищают воздух.',true,'Да, и ещё дают тень и влагу.'],['Батарейки можно выбрасывать в обычный бак.',false,'Нет: их сдают в эко-боксы.'],['Зарядка в розетке без телефона тоже немного тратит энергию.',true,'Да, лучше вынимать её из розетки.'],['Бумагу нельзя перерабатывать.',false,'Можно: из макулатуры делают новую бумагу.'],['Посуду в тазике мыть экономнее, чем под струёй.',true,'Да, воды уходит гораздо меньше.']],
+kids:[['🚰','Закрой кран','Чистишь зубы? Закрой кран! Вода — главное богатство степи.'],['🗑️','Мусор — в урну','Фантик, бутылка, пакет — в урну или домой. Степь — не мусорка.'],['♻️','Три коробки','Сделай дома коробки для бумаги, пластика и стекла и сортируй вместе с родителями.'],['💡','Выключи свет','Вышел из комнаты — нажми на выключатель. Так мы бережём энергию.'],['🌱','Посади росток','Посади семечко в горшок или дерево во дворе и ухаживай за ним.'],['🛍️','Эко-сумка','Ходи в магазин с тканевой сумкой: она заменит сотни пакетов.'],['🐾','Береги животных','Не пугай птиц и зверей, не рви цветы. Сайгакам нужна чистая и тихая степь.']],
+adult:[['🛒','Покупайте разумно','Выбирайте товары в стекле и картоне, меньше одноразовой посуды, готовьте по списку — меньше еды в мусор.'],['🔧','Чините и передавайте','Одежду, технику и игрушки можно починить, обменять или подарить.'],['🧒','Учите на примере','Сортируйте отходы вместе с детьми и объясняйте зачем — привычки рождаются дома.']]},
+kz:{
+r:[['Ескі батареяларды қайда апару керек?',['Өзенге','Қарапайым қоқысқа','Эко-бокске'],2,'Батареяда ауыр металдар бар.'],['Даланың символы, тұмсығы ерекше жануар?',['Ақбөкен','Түйе','Қосаяқ'],0,'Ақбөкен Қызыл кітапқа енген.'],['Дүкенге қандай сөмке алған дұрыс?',['Пластик пакет','Эко-сөмке','Бір реттік пакет'],1,'Бір эко-сөмке жүздеген пакетті алмастырады.'],['Шыныны неше рет қайта өңдеуге болады?',['1 рет','5 рет','Шексіз'],2,'Шыны қасиетін жоғалтпайды.'],['Тіс жуғанда суды не істеу керек?',['Ағызып қою','Шүмекті жабу','Күштірек ашу'],1,'Күніне ондаған литр су үнемделеді.'],['Пластик бөтелке қанша уақытта ыдырайды?',['Шамамен 5 жыл','Шамамен 50 жыл','Жүздеген жыл'],2,'Сондықтан пластикті қайта өңдеуге тапсыру керек.'],['Қай шам энергияны үнемдейді?',['LED шам','Қыздыру шамы','Бәрі бірдей'],0,'LED шам электр қуатын әлдеқайда аз жұмсайды.'],['Макулатураны өңдеудің пайдасы қандай?',['Ағаш аз кесіледі','Пайдасы жоқ','Қоқыс көбейеді'],0,'Су мен энергия да аз жұмсалады.'],['Далада демалғанда қоқысты не істеу керек?',['Көму','Өзіңмен алып кету','Өртеу'],1,'Дала із қалдырмағанды жақсы көреді.'],['Табиғатқа не пайдалы?',['Затты жөндеу','Бірден жаңасын алу','Тастап жіберу'],0,'Заттың екінші өмірі болады.']],
+m:[['Шыныны көп рет қайта өңдеуге болады.',true,'Дұрыс: шыны сапасын жоғалтпайды.'],['Банан қабығы далада бір күнде жоғалады.',false,'Жоқ: ол апталар мен айлар жатады.'],['Бұзылған шүмек тәулігіне ондаған литр суды ысырап етуі мүмкін.',true,'Иә, сондықтан шүмекті жөндеу керек.'],['Ақбөкендер Қазақстан даласында мекендейді.',true,'Иә, бұл біздің даланың символы.'],['Пластик жерде бір жылда жоғалады.',false,'Жоқ: ол жүздеген жыл ыдырайды.'],['Ағаштар ауаны тазартады.',true,'Иә, көлеңке мен ылғал да береді.'],['Батареяны қарапайым қоқысқа тастауға болады.',false,'Жоқ: оларды эко-бокске тапсырады.'],['Розеткадағы зарядтағыш телефонсыз да аздап қуат жұмсайды.',true,'Иә, оны розеткадан суырған жөн.'],['Қағазды қайта өңдеуге болмайды.',false,'Болады: макулатурадан жаңа қағаз жасалады.'],['Ыдысты леген ішінде жуған ағын судан үнемдірек.',true,'Иә, су әлдеқайда аз кетеді.']],
+kids:[['🚰','Шүмекті жап','Тіс жуып тұрсың ба? Шүмекті жап! Су — даланың басты байлығы.'],['🗑️','Қоқыс — урнаға','Қағаз, бөтелке, пакетті урнаға тастаңдар немесе үйге алып кетіңдер.'],['♻️','Үш қорап','Үйде қағазға, пластикке, шыныға арнап қорап жасап, ата-анаңмен бірге сұрыпта.'],['💡','Жарықты өшір','Бөлмеден шықтың ба — өшіргішті бас. Бұл қуатты үнемдейді.'],['🌱','Көшет отырғыз','Құмыраға тұқым немесе аулаға ағаш отырғызып, күтіп өсір.'],['🛍️','Эко-сөмке','Дүкенге мата сөмкемен бар: ол жүздеген пакетті алмастырады.'],['🐾','Жануарларды сақта','Құстар мен аңдарды үркітпе, гүлді жұлма. Ақбөкенге таза әрі тыныш дала керек.']],
+adult:[['🛒','Ақылмен сатып алыңыз','Шыны мен картон қаптаманы таңдап, бір реттік ыдысты азайтыңыз, тізіммен сатып алыңыз — тамақ аз тасталады.'],['🔧','Жөндеп, беріп жіберіңіз','Киім, техника, ойыншықты жөндеуге, айырбастауға немесе сыйлауға болады.'],['🧒','Үлгі болыңыз','Қалдықты балалармен бірге сұрыптап, себебін түсіндіріңіз — әдет үйден басталады.']]}};
+const S={lang:'ru',name:'',score:0,done:{},aud:'k',view:'login',tab:'games',pt:null,ans:'',q:''};
+try{Object.assign(S,JSON.parse(localStorage.getItem('eco')||'{}'))}catch(e){}
+S.view=S.name?'main':'login';
+const save=()=>{try{localStorage.setItem('eco',JSON.stringify({lang:S.lang,name:S.name,score:S.score,done:S.done}))}catch(e){}};
+const t=()=>T[S.lang];
+const add=n=>{S.score+=n;save()};
+const shuffle=a=>a.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+const langSw=()=>`<div class="lang"><button class="${S.lang=='ru'?'on':''}" onclick="setLang('ru')">RU</button><button class="${S.lang=='kz'?'on':''}" onclick="setLang('kz')">KZ</button></div>`;
+function resetAll(){S.name='';S.score=0;S.done={};S.rc=0;S.tab='games';S.aud='k';S.lang='ru';S.view='login';TH=null;G=null;try{localStorage.removeItem('eco')}catch(e){}render();window.scrollTo(0,0)}
+function setLang(l){S.lang=l;TH=null;save();G=null;render()}
+function go(v){S.view=v;G=null;render();window.scrollTo(0,0)}
+let G=null;
+function render(){
+  document.documentElement.lang=S.lang=='kz'?'kk':'ru';
+  document.title=t().app;
+  const v=S.view;
+  $('#app').innerHTML=({login,main,sort,riddle,myth,memory,quest,diploma}[v])();
+}
+function login(){const x=t();return `<div class="login"><div class="card"><div style="text-align:right">${langSw()}</div>${YURT.replace('width="64" height="54"','width="110" height="92"')}<h1>${x.app}</h1><p>${x.sub}</p>
+<input id="nm" maxlength="24" placeholder="${x.ph}" autocomplete="off" onkeydown="if(event.key=='Enter')start()"><button class="btn" style="width:100%;font-size:1.3rem" onclick="start()">${x.go}</button></div></div>`}
+function start(){const v=$('#nm').value.trim();if(!v)return;S.name=v;S.view='main';save();render()}
+function main(){
+  const x=t(),pct=Math.min(100,S.score/REQ*100),ok=S.score>=REQ,tab=S.tab;
+  const tabs=['games','tips','thr','stats'].map(k=>`<button class="${tab==k?'on':''}" onclick="S.tab='${k}';render()">${{games:'🎮',tips:'📖',thr:'🎯',stats:'📊'}[k]} ${x[k]}</button>`).join('');
+  return `<div class="wrap"><div class="band" style="margin-bottom:14px"></div><div class="card top"><div class="who">${YURT}<div>${x.app}<br><span style="font-size:1.2rem">${esc(S.name)}</span></div></div>
+<div class="bar"><div class="lbl"><span>🏅 ${x.diploma}</span><span>${Math.floor(S.score)} / ${REQ}</span></div><div class="track"><div class="fill" style="width:${pct}%"></div></div></div>${langSw()}</div>
+<div class="tabs" role="tablist">${tabs}<button class="rst" onclick="S.rc=1;render()">🔄 ${x.rst}</button></div>${S.rc?`<div class="card center" style="margin-bottom:16px"><p style="margin:0 0 12px;font-weight:800">${x.rq}</p><button class="btn red" onclick="resetAll()">${x.yes}</button> <button class="btn" onclick="S.rc=0;render()">${x.no}</button></div>`:''}
+<div class="hero"><div><h2>${x.hero}</h2><p>${x.herop}</p></div><div>${YURT.replace('width="64" height="54"','width="130" height="108"')}</div></div>
+<button class="dip" ${ok?'':'disabled'} onclick="go('diploma')"><span style="font-size:2.6rem">${ok?'🏆':'🔒'}</span><span><b>${x.getd}</b>${ok?x.avail:x.need}</span></button>
+${tab=='games'?games():tab=='tips'?tips():tab=='thr'?throwTab():stats()}<div class="band" style="margin-top:24px"></div></div>`}
+function games(){const x=t();
+  const L=[['sort','🗑️','so',18,'g1','#1f7a5a'],['riddle','❓','ri',10,'g2','#0f8a9d'],['myth','🧐','my',10,'g3','#a62639'],['memory','🃏','me',3,'g4','#1c4a78'],['quest','🧹','qu',3,'g5','#c98a12']];
+  return `<div class="grid">${L.map(g=>{const n=prog(g[2]);return `<button class="game" style="background:${g[5]}" onclick="go('${g[0]}')"><div class="ic">${n>=g[3]?'✅':g[1]}</div><b>${x[g[4]]}</b><small>${x[g[4]+'d']}</small><br><small>${n} / ${g[3]}</small></button>`}).join('')}</div>`}
+function tips(){const x=t(),d=D[S.lang],a=S.aud=='a',k=a?[['♻️',x.t1,x.t1p],['💡',x.t2,x.t2p],...d.adult]:d.kids;
+  return `<div class="lang" style="margin-bottom:14px"><button class="${a?'':'on'}" onclick="S.aud='k';render()">🧒 ${x.tt}</button><button class="${a?'on':''}" onclick="S.aud='a';render()">🧑 ${x.ta}</button></div>
+<div class="grid tg">${k.map(c=>`<div class="card tip"><h3><span style="font-size:2rem">${c[0]}</span>${c[1]}</h3><p>${c[2]}</p></div>`).join('')}</div>`}
+let TH=null;
+const BINS=[['paper','📄','#2b93c9','left:0;top:0'],['plastic','🥤','#d9961a','right:0;top:0'],['organic','🍎','#2f8f52','left:0;bottom:0'],['glass','🫙','#1b9a96','right:0;bottom:0']];
+const newTH=()=>{const pool=shuffle(SI.map((q,k)=>[...q,k]).filter(q=>q[3]!='hazard')).sort((a,b)=>(S.done['th'+a[4]]?1:0)-(S.done['th'+b[4]]?1:0)).slice(0,8);
+  return{got:0,items:shuffle(pool).map((q,n)=>({k:q[4],e:q[0],ru:q[1],kz:q[2],cat:q[3],bad:0,done:0,x:22+(n%4)*19+Math.random()*4,y:(n<4?38:60)+Math.random()*4}))}};
+function throwTab(){const x=t();if(!TH)TH=newTH();const left=TH.items.filter(i=>!i.done).length;
+  if(!left)return `<div class="card center"><div style="font-size:4rem">🏆</div><h2>${x.done}</h2><p><b>${TH.got?x.got+TH.got:x.nopts}</b></p><button class="btn" onclick="TH=null;render()">${x.again}</button></div>`;
+  return `<div class="card center"><h2>🎯 ${x.thr}</h2><p>${x.thd}</p><span class="pill">${8-left} / 8</span> <span class="pill">⭐ ${prog('th')} / 15</span>
+<div class="tf">${BINS.map(b=>`<div class="cb" data-b="${b[0]}" style="background:${b[2]};${b[3]}"><span style="font-size:2.2rem">${b[1]}</span>${x[b[0]]}</div>`).join('')}
+${TH.items.map((o,i)=>o.done?'':`<div class="ti" style="left:${o.x}%;top:${o.y}%" onpointerdown="dragStart(event,${i})"><span>${o.e}</span><small>${o[S.lang]}</small></div>`).join('')}</div></div>`}
+const binAt=e=>{const n=document.elementsFromPoint(e.clientX,e.clientY).find(n=>n.classList&&n.classList.contains('cb'));return n?n.dataset.b:null};
+function dragStart(e,i){const el=e.currentTarget,sx=e.clientX,sy=e.clientY,o=TH.items[i],th=TH;el.setPointerCapture(e.pointerId);el.classList.add('drag');
+  const clr=()=>document.querySelectorAll('.cb').forEach(n=>n.classList.remove('hot')),back=()=>{el.style.transform='';el.classList.remove('drag')};
+  el.onpointermove=ev=>{el.style.transform=`translate(calc(-50% + ${ev.clientX-sx}px),calc(-50% + ${ev.clientY-sy}px)) scale(1.15)`;const b=binAt(ev);document.querySelectorAll('.cb').forEach(n=>n.classList.toggle('hot',n.dataset.b===b))};
+  el.onpointercancel=()=>{clr();back()};
+  el.onpointerup=ev=>{el.onpointermove=el.onpointerup=null;const b=binAt(ev);clr();
+    if(!b||TH!==th){back();return}
+    if(b==o.cat){o.done=1;th.got+=rw('th'+o.k,o.bad?1:3);render()}
+    else{o.bad=1;back();el.classList.add('bad');setTimeout(()=>el.classList.remove('bad'),500)}}}
+function stats(){const x=t(),s=S.score;
+  const R=[[0,x.r1,'🌱'],[U2,x.r2+` (${U2}+)`,'🧭'],[U3,x.r3+` (${U3}+)`,'🛡️'],[REQ,x.r4+` (${REQ})`,'🏅']];
+  return `<div class="card"><h2>📊 ${x.st}</h2><p>${x.std}</p><div class="ranks">${R.map(r=>`<div class="rank ${s>=r[0]?'ok':''}"><div class="ic">${s>=r[0]?r[2]:'🔒'}</div><div><b style="font-size:1.2rem">${r[1]}</b><br>${s>=r[0]?x.opened:x.needp+r[0]}</div></div>`).join('')}</div></div>`}
+function head(label){return `<div class="band"></div><div class="gh"><button class="pill" onclick="go('main')" aria-label="${t().menu}">←</button><span class="pill">${label}</span><span class="pill gold">⭐ ${Math.floor(S.score)}</span></div>`}
+const INIT={};
+const rw=(id,p)=>{if(S.done[id])return 0;S.done[id]=1;add(p);return p};
+const prog=p=>Object.keys(S.done).filter(k=>k.startsWith(p)).length;
+const menu=(title,n,dn)=>{const x=t();return `<div class="wrap">${head(title)}<div class="grid">${[...Array(n)].map((_,i)=>`<button class="game" style="background:${dn(i)?'var(--grass)':'var(--sky)'}" onclick="lv(${i})"><div class="ic">${dn(i)?'✅':'⭐'}</div><b>${x.lvl} ${i+1}</b></button>`).join('')}</div></div>`};
+function lv(i){G=INIT[S.view](i);render()}
+const fin=(a,b,got,v,l)=>{const x=t();return `<div class="wrap center"><div class="card"><div style="font-size:5rem">🏆</div><h2>${a}</h2><p>${b}</p><p><b>${got?x.got+got:x.nopts}</b></p><button class="btn sky" onclick="go('${v}')">${l}</button> <button class="btn" onclick="go('main')">${x.menu}</button></div></div>`};
+const SI=[['🍾','Пластиковая бутылка','Пластик бөтелке','plastic'],['📰','Газета','Газет','paper'],['🍎','Огрызок яблока','Алма қалдығы','organic'],['🫙','Стеклянная банка','Шыны банка','glass'],['🔋','Батарейка','Батарейка','hazard'],['📦','Картонная коробка','Картон қорап','paper'],
+['🥤','Пластиковый стаканчик','Пластик стақан','plastic'],['🍌','Кожура банана','Банан қабығы','organic'],['📓','Тетрадь','Дәптер','paper'],['🍷','Винная бутылка','Шарап бөтелкесі','glass'],['💡','Энергосберегающая лампа','Үнемдегіш шам','hazard'],['🧴','Флакон от шампуня','Шампунь құтысы','plastic'],
+['🥚','Яичная скорлупа','Жұмыртқа қабығы','organic'],['🛍️','Пластиковый пакет','Пластик пакет','plastic'],['✉️','Конверт','Конверт','paper'],['🍶','Стеклянный флакон','Шыны құты','glass'],['🥔','Картофельные очистки','Картоп қабығы','organic'],['🪫','Аккумулятор','Аккумулятор','hazard']];
+INIT.sort=i=>({lv:i,i:0,fb:null,bad:0,got:0,list:shuffle(SI.slice(i*6,i*6+6).map((q,k)=>[...q,i*6+k]))});
+function sort(){const x=t();
+  if(!G)return menu(x.g1,3,i=>[0,1,2,3,4,5].every(k=>S.done['so'+(i*6+k)]));
+  if(G.i>=G.list.length)return fin(x.done,x.sd,G.got,'sort',x.lvs);
+  const it=G.list[G.i];
+  return `<div class="wrap">${head(x.lvl+' '+(G.lv+1)+' · '+(G.i+1)+' / 6')}<h2 class="center">${x.sortq}</h2><div class="item ${G.fb||''}">${it[0]}<small>${it[S.lang=='ru'?1:2]}</small></div>
+<div class="bins">${[['paper','📄'],['plastic','🥤'],['organic','🍎'],['glass','🫙'],['hazard','🔋']].map(b=>`<button class="bin" onclick="pick('${b[0]}')"><span>${b[1]}</span>${x[b[0]]}</button>`).join('')}</div></div>`}
+function pick(c){if(G.fb||G.i>=G.list.length)return;const g=G,it=g.list[g.i];
+  if(it[3]==c){g.fb='ok';g.got+=rw('so'+it[4],g.bad?3:6);render();setTimeout(()=>{if(G!==g)return;g.fb=null;g.bad=0;g.i++;render()},500)}
+  else{g.bad=1;g.fb='bad';render();setTimeout(()=>{if(G!==g)return;g.fb=null;render()},500)}}
+function riddle(){const x=t(),L=D[S.lang].r;if(!G)G={i:0,sel:null,got:0};
+  if(G.i>=L.length)return fin(x.done,x.rd,G.got,'riddle',x.again);
+  const r=L[G.i];
+  return `<div class="wrap">${head(x.riddle+' '+(G.i+1)+' / '+L.length)}<div class="card"><h2 style="margin-bottom:12px">${r[0]}</h2>
+${r[1].map((o,i)=>`<button class="opt ${G.sel!==null?(i==r[2]?'ok':i==G.sel?'no':''):''}" ${G.sel!==null?'disabled':''} onclick="ans(${i})">${o}</button>`).join('')}
+${G.sel!==null?`<div class="fact">🌿 ${r[3]}</div><button class="btn" onclick="G.i++;G.sel=null;render()">${x.next}</button>`:''}</div></div>`}
+function ans(i){if(G.sel!==null)return;G.sel=i;if(i==D[S.lang].r[G.i][2])G.got+=rw('ri'+G.i,12);render()}
+function myth(){const x=t(),L=D[S.lang].m;if(!G)G={i:0,sel:null,got:0};
+  if(G.i>=L.length)return fin(x.done,x.rd,G.got,'myth',x.again);
+  const m=L[G.i],s=G.sel,c=v=>s===null?'':(v===m[1]?'ok':v===s?'no':'');
+  return `<div class="wrap">${head(x.g3+' '+(G.i+1)+' / '+L.length)}<div class="card"><h2 style="margin-bottom:16px">${m[0]}</h2><div class="two"><button class="opt ${c(true)}" ${s!==null?'disabled':''} onclick="mans(true)">${x.tr}</button><button class="opt ${c(false)}" ${s!==null?'disabled':''} onclick="mans(false)">${x.my}</button></div>
+${s!==null?`<div class="fact"><b>${s===m[1]?x.right:x.wrong}</b> ${m[2]}</div><button class="btn" onclick="G.i++;G.sel=null;render()">${x.next}</button>`:''}</div></div>`}
+function mans(v){if(G.sel!==null)return;G.sel=v;if(v===D[S.lang].m[G.i][1])G.got+=rw('my'+G.i,10);render()}
+INIT.memory=i=>{const e=['♻️','🌳','💧','🔋','☀️','🐪','🌾','🍃'].slice(0,[4,6,8][i]);return{lv:i,got:0,fin:0,f:null,lock:0,cards:shuffle([...e,...e]).map(v=>({e:v,o:0,m:0}))}};
+function memory(){const x=t();if(!G)return menu(x.g4,3,i=>S.done['me'+(i+1)]);
+  if(G.fin)return fin(x.done,x.sd,G.got,'memory',x.lvs);
+  return `<div class="wrap">${head(x.lvl+' '+(G.lv+1))}<div class="mem">${G.cards.map((c,i)=>`<button class="mc ${c.m?'m':c.o?'o':''}" onclick="flip(${i})" aria-label="card">${c.o||c.m?c.e:'❔'}</button>`).join('')}</div></div>`}
+function flip(i){const g=G,c=g.cards[i];if(g.lock||c.o||c.m)return;c.o=1;
+  if(g.f===null)g.f=i;
+  else{const a=g.cards[g.f];g.f=null;
+    if(a.e==c.e){a.m=c.m=1;if(g.cards.every(k=>k.m)){g.got=rw('me'+(g.lv+1),[40,50,60][g.lv]);g.fin=1}}
+    else{g.lock=1;setTimeout(()=>{if(G!==g)return;a.o=c.o=0;g.lock=0;render()},700)}}
+  render()}
+const TR=['🥤','🍬','📰','🍾','🥫','🛍️','🍌','📦','🧃','🗞️','🥡','🧴'];
+INIT.quest=i=>({lv:i,got:0,left:TR.slice(0,[8,10,12][i]).map((e,k)=>({k,e,top:12+Math.random()*66,left:4+Math.random()*84}))});
+function quest(){const x=t();if(!G)return menu(x.g5,3,i=>S.done['qu'+(i+1)]);
+  if(!G.left.length)return fin(x.qdone,x.sd,G.got,'quest',x.lvs);
+  return `<div class="wrap">${head(x.quest+' '+G.left.length)}<div class="field">${G.left.map(o=>`<button class="trash" style="top:${o.top}%;left:${o.left}%" onclick="clean(${o.k})" aria-label="trash">${o.e}</button>`).join('')}</div></div>`}
+function clean(k){G.left=G.left.filter(o=>o.k!=k);if(!G.left.length)G.got=rw('qu'+(G.lv+1),[40,50,60][G.lv]);render()}
+
+function mkpdf(jpg,w,h){const pw=842,ph=595,enc=new TextEncoder(),parts=[],off=[];let len=0;
+  const push=d=>{const u=typeof d=='string'?enc.encode(d):d;parts.push(u);len+=u.length};
+  const obj=(n,b)=>{off[n]=len;push(`${n} 0 obj\n${b}\nendobj\n`)};
+  push('%PDF-1.4\n');
+  obj(1,'<</Type/Catalog/Pages 2 0 R>>');obj(2,'<</Type/Pages/Kids[3 0 R]/Count 1>>');
+  obj(3,`<</Type/Page/Parent 2 0 R/MediaBox[0 0 ${pw} ${ph}]/Resources<</XObject<</Im0 4 0 R>>>>/Contents 5 0 R>>`);
+  off[4]=len;push(`4 0 obj\n<</Type/XObject/Subtype/Image/Width ${w}/Height ${h}/ColorSpace/DeviceRGB/BitsPerComponent 8/Filter/DCTDecode/Length ${jpg.length}>>\nstream\n`);push(jpg);push('\nendstream\nendobj\n');
+  const cs=`q ${pw} 0 0 ${ph} 0 0 cm /Im0 Do Q`;obj(5,`<</Length ${cs.length}>>\nstream\n${cs}\nendstream`);
+  const xr=len;let x='xref\n0 6\n0000000000 65535 f \n';for(let i=1;i<6;i++)x+=String(off[i]).padStart(10,'0')+' 00000 n \n';
+  push(x+`trailer\n<</Size 6/Root 1 0 R>>\nstartxref\n${xr}\n%%EOF`);
+  return new Blob(parts,{type:'application/pdf'})}
+async function drawDiploma(){const x=t(),W=1754,H=1240,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
+  try{await document.fonts.load('900 40px Nunito');await document.fonts.load('700 30px Nunito')}catch(e){}
+  const tx=(s,y,f,col,ls)=>{g.font=f;g.fillStyle=col;g.letterSpacing=ls||'0px';g.fillText(s,W/2,y)};
+  g.fillStyle='#fffaf0';g.fillRect(0,0,W,H);
+  g.strokeStyle='#0b3a5c';g.lineWidth=36;g.strokeRect(28,28,W-56,H-56);
+  g.strokeStyle='#d9a521';g.lineWidth=4;g.strokeRect(62,62,W-124,H-124);g.strokeRect(74,74,W-148,H-148);
+  const band=(y,h)=>{g.save();g.beginPath();g.rect(100,y,W-200,h);g.clip();const sc=h/32,tw=60*sc;for(let q=100;q<W-100;q+=tw){g.save();g.translate(q,y);g.scale(sc,sc);g.fillStyle='#0b4a6a';g.fillRect(0,0,60,32);g.strokeStyle='#e3a72f';g.lineWidth=2.2;g.lineCap='round';HORN.forEach(d=>g.stroke(new Path2D(d)));g.fillStyle='#e3a72f';g.fill(new Path2D(DIA));g.restore()}g.restore();g.strokeStyle='#e3a72f';g.lineWidth=2;g.strokeRect(100,y,W-200,h)};
+  band(88,34);band(1126,34);
+  g.textAlign='center';g.textBaseline='alphabetic';
+  tx(x.app.toUpperCase(),185,'900 40px Nunito, sans-serif','#2f8f52','12px');
+  tx(x.diploma.toUpperCase(),360,'900 140px Georgia, serif','#0b3a4f','10px');
+  tx(x.awarded.toUpperCase(),450,'900 34px Nunito, sans-serif','#5b7480','8px');
+  let fs=100;const nm=S.name;g.font=`900 ${fs}px Georgia, serif`;while(g.measureText(nm).width>W-420&&fs>40){fs-=4;g.font=`900 ${fs}px Georgia, serif`}
+  const nw=g.measureText(nm).width;tx(nm,580,`900 ${fs}px Georgia, serif`,'#b8862a');
+  g.setLineDash([16,10]);g.strokeStyle='#9fd0e6';g.lineWidth=6;g.beginPath();g.moveTo(W/2-nw/2-30,610);g.lineTo(W/2+nw/2+30,610);g.stroke();g.setLineDash([]);
+  const words=`${x.dtext} «${x.app}».`.split(' ');let line='',y=690;g.font='700 36px Nunito, sans-serif';
+  for(const w of words){const n=line?line+' '+w:w;if(g.measureText(n).width>1100&&line){tx(line,y,'700 36px Nunito, sans-serif','#0b3a4f');line=w;y+=52}else line=n}
+  tx(line,y,'700 36px Nunito, sans-serif','#0b3a4f');
+  g.fillStyle='#e3f3fb';g.strokeStyle='#bfe0ef';g.lineWidth=6;g.beginPath();g.roundRect(W/2-270,800,540,140,36);g.fill();g.stroke();
+  tx(x.rl,845,'900 26px Nunito, sans-serif','#2b93c9');tx(x.rank,915,'900 66px Nunito, sans-serif','#0b3a4f');
+  g.textAlign='left';g.font='700 28px Nunito, sans-serif';g.fillStyle='#5b7480';g.fillText(x.fs,190,1010);g.font='900 96px Nunito, sans-serif';g.fillStyle='#b8862a';g.fillText(String(Math.floor(S.score)),190,1100);
+  g.textAlign='center';g.strokeStyle='#0b3a4f';g.lineWidth=4;g.beginPath();g.moveTo(W-580,1085);g.lineTo(W-190,1085);g.stroke();
+  g.font='italic 700 30px Nunito, sans-serif';g.fillStyle='#5b7480';g.fillText(x.sign,W-385,1118);
+  g.save();g.translate(W/2,1035);g.rotate(-.2);g.strokeStyle='#b8324a';g.lineWidth=5;g.beginPath();g.arc(0,0,86,0,7);g.stroke();g.lineWidth=2;g.beginPath();g.arc(0,0,76,0,7);g.stroke();
+  g.fillStyle='#b8324a';g.font='900 28px Nunito, sans-serif';g.textBaseline='middle';g.fillText(x.app,0,0);g.restore();
+  return c}
+async function dl(){const b=$('#dlb');if(b)b.disabled=true;
+  try{const c=await drawDiploma();const jb=await new Promise((r,j)=>c.toBlob(v=>v?r(v):j(new Error('jpeg')),'image/jpeg',.92));
+    const blob=mkpdf(new Uint8Array(await jb.arrayBuffer()),c.width,c.height),fn='ecostep-diploma.pdf';
+    const d=window.claude&&claude.use?await claude.use('downloads'):null;
+    if(d)await d.save({filename:fn,data:blob});
+    else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fn;document.body.appendChild(a);a.click();a.remove()}
+  }catch(e){if(!(e&&e.code=='declined'))alert(t().pdfErr)}
+  if(b)b.disabled=false}
+function diploma(){const x=t();
+  return `<div class="wrap"><div class="np" style="display:flex;justify-content:space-between;margin-bottom:16px"><button class="btn sky" onclick="go('main')">← ${x.menu}</button><button class="btn" id="dlb" onclick="dl()">⬇️ ${x.dl}</button></div>
+<div class="diploma">${YURT} <b style="letter-spacing:.3em;text-transform:uppercase;color:#2f8f52;font-size:1.3rem;padding:0 12px">${x.app}</b> ${YURT}
+<h1>${x.diploma}</h1><div style="font-weight:900;letter-spacing:.2em;color:#5b7480">${x.awarded}</div><div class="nm">${esc(S.name)}</div><p style="max-width:56ch;margin:0 auto;font-size:1.2rem">${x.dtext} «${x.app}».</p>
+<div class="rk"><small style="display:block;font-size:.9rem;color:#2b93c9">${x.rl}</small>${x.rank}</div>
+<div class="ft"><div><small>${x.fs}</small><div style="font:900 2.6rem Nunito;color:#b8862a">${Math.floor(S.score)}</div></div><div class="stamp">${x.app}</div><div class="sig">${x.sign}</div></div></div></div>`}
+render();
+</script>
+</body>
+</html>
